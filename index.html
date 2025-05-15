@@ -1,0 +1,180 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | Dimitri Gaggioli</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+  <link rel="stylesheet" href="static/style.css">
+  <script defer src="static/script.js"></script>
+</head>
+<body>
+
+  <header class="banner-main-container">
+    <div class="banner-title-container">
+      <h1 class="banner-title thin">DIMITRI GAGGIOLI</h1>
+      <h2 class="banner-subtitle">Développeur Python Junior</h2>
+    </div>
+  </header>
+
+  <main>
+    <section class="main-container">
+
+      <!-- ← LEFT -->
+      <section class="left-section">
+        <div class="personal-details-container">
+          <div class="portrait-container">
+            <img src="static/portrait_D_Gaggioli.jpg" alt="Portrait de Dimitri">
+          </div>
+          <div class="personal-details">
+            <p>
+              36 ans<br>
+              Français<br>
+              Célibataire
+            </p>
+          </div>
+        </div>
+
+        <div class="resume-block block">
+          <h3 class="thin">Expérience Professionnelle</h3>
+          <ul id="experience-list"></ul>
+        </div>
+
+        <div class="education-block block">
+          <h3 class="thin">Formation</h3>
+          <ul id="education-list"></ul>
+        </div>
+      </section>
+
+      <!-- CENTER -->
+      <section class="center-section block">
+        <div class="intro">
+          <p>
+            Développeur d'applications basé à <b>Paris</b>, je navigue entre <b>code</b>
+            et <b>création artistique</b>. Passionné de <b>poésie</b>, de <b>cinéma documentaire</b>,
+            et de <b>fiction consciente</b>, j'explore aussi volontiers l'univers de la <b>tech</b> que
+            celui des <b>lettres</b> et des <b>images</b>.
+          </p>
+          <p class="subline">
+            Je cherche actuellement à me faire une expérience et à développer mes skills en programmation.
+          </p>
+        </div>
+
+        <h3 class="thin">Projets d'études</h3>
+        <div id="academic-projects" class="projects-container academic"></div>
+
+        <h3 class="thin">Projets Perso</h3>
+        <div id="personal-projects" class="projects-container personal"></div>
+      </section>
+
+      <!-- RIGHT -->
+        <section class="right-section">
+            <!-- Compétences -->
+            <div class="block skills-block">
+            <h3 class="thin">COMPÉTENCES</h3>
+            <img src="icons/skills.svg" class="skills-icons" alt="" class="icon">
+            <ul class="right-section-list">
+                <li><span class="skills-list">Python</span>
+                  <div class="stars-icon-container">
+                    <img src="icons/4_s.png" alt="" class="stars_icon">
+                  </div>
+                </li>
+                <li><span class="skills-list">Flask / Django</span>
+                  <div class="stars-icon-container">
+                    <img src="icons/3_s.png" alt="" class="stars_icon">
+                  </div>
+                </li>
+                <li><span class="skills-list">HTML</span>
+                  <div class="stars-icon-container">
+                    <img src="icons/4_s.png" alt="" class="stars_icon">
+                  </div>
+                </li>
+                <li><span class="skills-list">CSS</span>
+                  <div class="stars-icon-container">
+                    <img src ="icons/3_s.png" alt="" class="stars_icon">
+                  </div>
+                </li>
+                <li><span class="skills-list">JavaScript</span>
+                  <div class="stars-icon-container">
+                    <img src="icons/2_s.png" alt="" class="stars_icon">
+                  </div>
+                </li>
+                <li><span class="skills-list">Git</span>
+                  <div class="stars-icon-container">
+                    <img src="icons/3_s.png" alt="" class="stars_icon">
+                  </div>
+                </li>
+                <li><span class="skills-list">GitHub</span>
+                  <div class="stars-icon-container">
+                    <img src="icons/3_s.png" alt="" class="stars_icon">
+                  </div>
+                </li>
+            </ul>
+            </div>
+            <!-- Qualités -->
+            <div class="block qualities-block">
+            <h3 class="thin">QUALITÉS</h3>
+            <ul>
+                <li>Créativité</li>
+                <li>Capacité d'adaptation</li>
+                <li>Excellentes compétences relationnelles</li>
+                <li>Esprit d'équipe</li>
+                <li>Orientation résultats</li>
+            </ul>
+            </div>
+
+            <!-- Centres d’intérêts -->
+            <div class="block interests-block">
+            <h3 class="thin">CENTRES D'INTÉRÊTS</h3>
+            <ul>
+                <li>Poésie</li>
+                <li><a href="https://www.instagram.com/remo_nesa/" target="_blank">@remo_nesa</a></li>
+                <li>Programmation (Cinéma)</li>
+                <li><a href="https://www.instagram.com/laclefrevival/" target="_blank">@laclefrevival</a></li>
+            </ul>
+            </div>
+
+        </section>
+
+    </section>
+  </main>
+
+  <footer>
+     <!-- Contact -->
+     <div class="block contact-block">
+        <h3 class="thin">CONTACT</h3>
+        <ul class="contact-list">
+            <li>
+              <div class="contact-icon-container">
+                <img src="icons/email.svg" alt="" class="icon">
+              </div>
+              <a href="mailto:dimitri.gaggioli@gmail.com">dimitri.gaggioli@gmail.com</a>
+            </li>
+            <li>
+              <div class="contact-icon-container">
+                <img src="icons/phone.svg" alt="" class="icon">
+              </div>
+              <a href="tel:+33620156172">(+33) 6 20 15 61 72</a>
+            </li>
+            <li>
+              <div class="contact-icon-container">
+                <img src="icons/github.svg" alt="" class="icon">
+              </div>
+              <a href="https://github.com/dim-gggl" target="_blank">dim-gggl</a>
+            </li>
+            <li>
+              <div class="contact-icon-container">
+                <img src="icons/instagram.svg" alt="" class="icon">
+              </div>
+
+            </li>
+        </ul>
+      </div>
+  </footer>
+
+</body>
+</html>
+
