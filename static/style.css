@@ -34,6 +34,7 @@
   }
 
   .banner-title {
+    font-family: var(--bold);
     font-size: 3rem;
     letter-spacing: -1px;
     font-weight: 800;
@@ -68,6 +69,7 @@
     max-width: 1200px;
     margin: 2em auto;
     gap: 2em;
+    padding-inline: 3rem;;
   }
 
   .left-section, .center-section, .right-section {
@@ -138,24 +140,31 @@
     border-left: 1px solid #222;
   }
 
-  .experience-year {
+  #education-list li {
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+  }
+
+
+  .experience-year, .education-list-year {
     text-align: center;
     font-weight: 600;
     font-size: 22px;
   }
 
-    .experience-kind {
-      font-family: "Genos";
-      font-size: 2.2rem;
-      font-variant: petite-caps;
-      color: var(--blue);
-      text-align: center;
-      letter-spacing: -1px;
+  .experience-kind .education-list-degree {
+    font-family: var(--bold);
+    font-size: 2.2rem;
+    font-variant: petite-caps;
+    color: var(--blue);
+    text-align: center;
+    letter-spacing: -1px;
   }
 
-  .experience-role {
+  .experience-role .education-list-institution {
     text-align: center;
-    font-family: "Genos";
+    font-family: var(--bold);
     font-size: 22px;
     margin-bottom: 4ch;
   }
@@ -165,12 +174,18 @@
   }
 
   .intro p {
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--thin);
     font-weight: 200;
     letter-spacing: 0px;;
     font-size: 1rem;
     margin-bottom: .5em;
   }
+
+  .intro p > b {
+    font-weight: 900;
+    color: white;
+  }
+
   .intro .subline {
     font-size: .9rem;
   }
@@ -199,29 +214,28 @@
 
   .project-box p.genos {
     font-size: 1.05rem;
-    font-family: Arial Narrow;
-    /* margin-block: .5em; */
+    font-family: "Arial Narrow", Arial Narrow, "Helvetica Neue", "impact", sans-serif;
+    font-weight: 800;    /* margin-block: .5em; */
   }
 
-.project-box p.repo-skills {
-  font-family: "Genos";
-  font-weight: 600;
-  text-transform: uppercase;
-  color: white;
-  margin-top: 1.3ch;
-  font-size: 1.05rem;
-}
-
-.project-box a {
-  text-align: center;
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: var(--blue);
-  font-family: "Montserrat";
-  text-transform: uppercase;
-  font-weight: 500;
+  .project-box p.repo-skills {
+    font-family: var(--bold);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 1.3ch;
+    font-size: 1.05rem;
   }
 
+  .project-box a {
+    text-align: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--blue);
+    font-family: var(--regular);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
 
   /* === RIGHT SECTION LAYOUT === */
   .right-section {
@@ -315,31 +329,42 @@
     object-fit: cover;
   }
 
+  .interests-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
   /* Liens */
   .right-section a {
-    color: #0066cc;
+    color: var(--blue);
     text-decoration: none;
   }
 
   .right-section a:hover {
-    text-decoration: underline;
+    cursor: pointer;
   }
 
   footer {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     background-color: var(--banner-bg);
     color: var(--bg);
+    padding-bottom: 3rem;;
   }
 
   .contact-block {
     width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   .contact-list {
     width:100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
   }
   .contact-list li {
@@ -352,7 +377,7 @@
   .contact-list li > a {
     text-decoration: none;
     color: var(--fg);
-    font-family: "Montserrat";
+    font-family: var(--regular);
     font-weight: 500;
   }
   .contact-icon-container {

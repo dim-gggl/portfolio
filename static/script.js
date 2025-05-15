@@ -89,7 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const eduList = document.getElementById('education-list');
     education.forEach(item => {
       const li = document.createElement('li');
-      li.innerHTML = `<strong>${item.period}</strong> — ${item.degree}<br><small>${item.institution}</small>`;
+      li.innerHTML = `
+      <p class="education-list-year"><strong>${item.period}</strong></p>
+      <p class="education-list-degree">${item.degree}</p>
+      <p class=education-list-institution"><small>${item.institution}</small></p>
+      `;
       eduList.append(li);
     });
 
