@@ -508,22 +508,69 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    padding: 1ch auto;
   }
   .skills-block ul li {
     display: flex;
     justify-content: space-between;
+    max-width: 100%;
   }
   .skills-block li > span {
-    margin-right: auto;
-    font-weight: 600;
-    font-family: "Genos";
-    font-size: 2.6rem;
+      margin-right: auto;
+      font-weight: 600;
+      font-family: "Genos";
+      font-size: 1.6rem;
+      font-variant: all-small-caps;
   }
-  .stars_icon {
-    width: 40%;
-    margin-left: 293px;
-  }
+    .stars_icon {
+        width: 25%;
+    }
+
   #experience-list {
     text-align: center;
   }
+}
+@media screen and (max-width: 768px) {
+    body {
+      line-height: 1.1;
+    }
+    .banner-title {
+      font-size: 3.3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .banner-subtitle {
+      opacity: 1;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 2.8rem;
+      color: var(--blue);
+      margin-top: 1.5ch;
+  }
+
+  .experience-role {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 2ch;
+  }
+  .experience-kind, .education-degree {
+    letter-spacing: 1px;;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+  .experience-skills {
+        text-align: center;
+        letter-spacing: 1px;
+        text-align: left;
+        line-height: 1.2;
+    }
+
+  .education-list-institution {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+  }
+
 }
