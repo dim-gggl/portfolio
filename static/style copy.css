@@ -38,24 +38,21 @@
     font-size: 4.5rem;
     letter-spacing: -1px;
     font-weight: 800;
-    margin-top: 1ch;
-
-}
+    margin-top: -0.5ch;
+  }
 
   .thin {
     font-family: var(--thin);
     font-optical-sizing: auto;
-    font-weight: 300;
+    font-weight: 100;
     font-style: normal;
-
-}
+  }
 
   .project-box p.genos {
     font-size: 1rem;
-    font-family: var(--regular);
+    font-family: "Arial Narrow", "Helvetica Neue", impact, sans-serif;
     font-weight: 100;
     color: var(--fg);
-
 }
 
   .banner-subtitle {
@@ -64,9 +61,8 @@
     font-weight: 300;
     font-size: 2.8rem;
     color: var(--blue);
-    margin: 1.2ch auto 0 auto;
-
-}
+    margin: -15px auto 0 auto;
+  }
 
   .main-container {
     display: flex;
@@ -109,7 +105,6 @@
     width: auto;
     height: auto;
     overflow: hidden;
-    align-items: center;
   }
 
   .portrait-container > img {
@@ -123,7 +118,7 @@
   .personal-details {
     order: 2;
     width: 20%;
-    padding-left: 3ch;
+    padding: auto 0 auto 1ch;
     text-align: left;
     align-items: center;
   }
@@ -241,17 +236,13 @@
   }
 
   .project-box {
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
     background: var(--banner-bg);
     padding: 1em;
     border-radius: 26px;
     border: 1px solid var(--fg);
     text-align: center;
     transition: transform ease .3s;
-
-}
+  }
 
   .project-box:hover {
     transform: scale(1.02);
@@ -259,22 +250,19 @@
   }
 
   .project-box p.genos {
-    font-size: 1rem;
-    font-family: var(--regular);
-    font-weight: 300;
-    /* margin-block: .5em; */
-
-}
+    font-size: 1.05rem;
+    font-family: "Arial Narrow", Arial Narrow, "Helvetica Neue", "impact", sans-serif;
+    font-weight: 800;    /* margin-block: .5em; */
+  }
 
   .project-box p.repo-skills {
     font-family: var(--bold);
     font-weight: 800;
     text-transform: uppercase;
     color: white;
-    /* margin-top: 1.3ch; */
+    margin-top: 1.3ch;
     font-size: 1.05rem;
-
-}
+  }
 
   .project-box a {
     text-align: center;
@@ -330,17 +318,15 @@
     /* display: flex; */
     /* align-items: center; */
     /* gap: 0.5em; */
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     letter-spacing: -1px;
-    line-height: 1.25;
     text-align: center;
     text-transform: uppercase;
     border-bottom: 1px solid var(--fg);
     /* padding-bottom: 0.3em; */
     margin-bottom: 0.6rem;
     color: var(--yellow);
-
-}
+  }
 
 
 
@@ -465,19 +451,19 @@
   .left-section, .center-section, .right-section {
     min-width: 100%;
   }
-
-  .personal-details {
-    display: none;
+  .personal-details-container {
+    flex-wrap: wrap;
+    padding: 0 5ch 0 0;
   }
 
-  .portrait-container {
-    justify-content: space-around;
-    align-content: space-around;
-    align-items: center;
+  .personal-details p {
+      width: 47.5%;
+      margin-left: -392px;
+      font-size: 32px;
   }
 
   .portrait-container img {
-    width: 40%;
+    width: 35%;
   }
 
   .personnal-details-intro,
@@ -487,10 +473,6 @@
 
   .intro, .subline {
     display: none;
-  }
-
-  .experience-skills {
-    text-align: center;
   }
 
   .skills-block {

@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
       li.innerHTML = `
       <p class="education-list-year"><strong>${item.period}</strong></p>
       <p class="education-list-degree">${item.degree}</p>
-      <p class=education-list-institution"><small>${item.institution}</small></p>
+      <p class="education-list-institution">${item.institution}</p>
       `;
       eduList.append(li);
     });
