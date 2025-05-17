@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // → Modifie ces tableaux pour changer ton CV et tes projets
     const experience = [
       {
         period: '2010 - 2024',
@@ -27,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     ];
 
-    // sépare tes projets en deux listes
     const academicProjects = [
       'Book_Scraper',
       'Chess_Up',
@@ -71,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Remplissage CV
     const expList = document.getElementById('experience-list');
     experience.forEach(item => {
       const li = document.createElement('li');
@@ -97,14 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
       eduList.append(li);
     });
 
-    // Fonction pour choper les data GitHub et afficher les projets
     function loadProjects(repoNames, containerId) {
       const container = document.getElementById(containerId);
       repoNames.forEach(name => {
-      //   fetch(`https://api.github.com/repos/dim-gggl/${name}`)
-      //     .then(res => res.json())
-      //     .then(repo => {
-      //       if (repo.message) return; // skip si erreur
              const card = document.createElement('div');
              const repoURL = `https://github.com/dim-gggl/${name}`;
              card.className = 'project-box';
@@ -119,9 +111,55 @@ document.addEventListener('DOMContentLoaded', () => {
              })
              container.append(card);
            })
-      //     .catch(() => {});
        };
 
     loadProjects(academicProjects, 'academic-projects');
     loadProjects(personalProjects, 'personal-projects');
   });
+
+  (function () {
+    const btn = document.getElementById('theme-toggle');
+
+    const ASSETS = {
+      dark: {
+        'two-star':  'icons/2_s.png',
+        'three-star':'icons/3_s.png',
+        'four-star': 'icons/4_s.png',
+        mail:   'icons/email.svg',
+        phone:  'icons/phone.svg',
+        github: 'icons/github.svg',
+        skills: 'icons/skills.svg'
+      },
+      light: {
+        'two-star':  'icons/two-star.png',
+        'three-star':'icons/three-star.png',
+        'four-star': 'icons/four-star.png',
+        mail:   'icons/mail_red.png',
+        phone:  'icons/phone_red.png',
+        github: 'icons/github_red.png',
+        skills: 'icons/skills_.png'
+      }
+    };
+
+    function applyTheme(theme) {
+      document.querySelectorAll('[data-icon]').forEach(img => {
+        const key = img.dataset.icon;
+        if (ASSETS[theme][key]) img.src = ASSETS[theme][key];
+      });
+    }
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem('theme');
+    const startLight = saved === 'light' || (!saved && !prefersDark);
+
+    if (startLight) document.documentElement.classList.add('light');
+    applyTheme(startLight ? 'light' : 'dark');
+    btn.textContent = startLight ? '☀️ Clair' : '🌙 Sombre';
+
+    btn.addEventListener('click', () => {
+      const light = document.documentElement.classList.toggle('light');
+      const theme = light ? 'light' : 'dark';
+      btn.textContent = light ? '☀️ Clair' : '🌙 Sombre';
+      localStorage.setItem('theme', theme);
+      applyTheme(theme);
+    });
+  })();

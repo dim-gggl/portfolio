@@ -1,21 +1,19 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio | Dimitri Gaggioli</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-  </style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');</style>
   <link rel="stylesheet" href="static/style.css">
   <script defer src="static/script.js"></script>
 </head>
 <body>
   <header class="banner-main-container">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">🌙Sombre</button>
     <div class="banner-title-container">
       <h1 class="banner-title">DIMITRI GAGGIOLI</h1>
-      <h2 class="banner-subtitle">Développeur Python Junior</h2>
+      <h2 class="banner-subtitle">Développeur Python&nbsp;Junior</h2>
     </div>
   </header>
   <main>
@@ -29,18 +27,6 @@
             <p class="personal-details">36 ans<br>Français<br>Célibataire</p>
           </div>
         </div>
-        <div class="personal-details-intro">
-          <p>
-            Développeur d'applications basé à <b>Paris</b>, je navigue entre <b>code</b>
-            et <b>création artistique</b>. Passionné de <b>poésie</b>, de <b>cinéma documentaire</b>,
-            et de <b>fiction consciente</b>, j'explore aussi volontiers l'univers de la <b>tech</b> que
-            celui des <b>lettres</b> et des <b>images</b>.
-          </p>
-          <p class="personal-details-subline">
-            Je cherche actuellement à me faire une expérience et à développer mes skills en programmation.
-          </p>
-        </div>
-
 
         <div class="resume-block block">
           <h3 class="thin">Expérience Professionnelle</h3>
@@ -79,41 +65,41 @@
         <!-- Compétences -->
         <div class="block skills-block">
           <h3 class="thin">COMPÉTENCES</h3>
-          <img src="icons/skills.svg" class="skills-icons" alt="" class="icon">
+          <img src="icons/skills.svg" class="skills-icons" alt="" data-icon="skills">
           <ul class="right-section-list">
-            <li><span class="skills-list">Python</span>
+            <li><span class="skills-list four-star">Python</span>
               <div class="stars-icon-container">
-                <img src="icons/4_s.png" alt="" class="stars_icon">
+                <img src="icons/4_s.png" alt="" class="stars_icon" data-icon="four-star">
               </div>
             </li>
             <li><span class="skills-list">Flask / Django</span>
               <div class="stars-icon-container">
-                <img src="icons/3_s.png" alt="" class="stars_icon">
+                <img src="icons/3_s.png" alt="" class="stars_icon" data-icon="three-star">
               </div>
             </li>
             <li><span class="skills-list">HTML</span>
               <div class="stars-icon-container">
-                <img src="icons/4_s.png" alt="" class="stars_icon">
+                <img src="icons/4_s.png" alt="four-star" class="stars_icon" data-icon="four-star">
               </div>
             </li>
             <li><span class="skills-list">CSS</span>
               <div class="stars-icon-container">
-                <img src ="icons/3_s.png" alt="" class="stars_icon">
+                <img src ="icons/3_s.png" alt="three-star" class="stars_icon" data-icon="three-star">
               </div>
             </li>
             <li><span class="skills-list">JavaScript</span>
               <div class="stars-icon-container">
-                <img src="icons/2_s.png" alt="" class="stars_icon">
+                <img src="icons/2_s.png" alt="two-star" class="stars_icon" data-icon="two-star">
               </div>
             </li>
             <li><span class="skills-list">Git</span>
               <div class="stars-icon-container">
-                <img src="icons/3_s.png" alt="" class="stars_icon">
+                <img src="icons/3_s.png" alt="three-star" class="stars_icon" data-icon="three-star">
               </div>
             </li>
             <li><span class="skills-list">GitHub</span>
               <div class="stars-icon-container">
-                <img src="icons/3_s.png" alt="" class="stars_icon">
+                <img src="icons/3_s.png" alt="three-star" class="stars_icon" data-icon="three-star">
               </div>
             </li>
           </ul>
@@ -151,7 +137,7 @@
           <li>
             <div class="contact-icon-container">
               <a href="mailto:dimitri.gaggioli@gmail.com">
-                <img src="icons/email.svg" href="mailto:dimitri.gaggioli@gmail.com" alt="" class="icon">
+                <img src="icons/email.svg" href="mailto:dimitri.gaggioli@gmail.com" alt="" data-icon="mail">
               </a>
             </div>
 
@@ -159,14 +145,14 @@
           <li>
             <div class="contact-icon-container">
               <a href="tel:+33620156172">
-                <img src="icons/phone.svg" alt="" class="icon">
+                <img src="icons/phone.svg" alt="" data-icon="phone">
               </a>
             </div>
           </li>
           <li>
             <div class="contact-icon-container">
               <a href="https://github.com/dim-gggl">
-                <img src="icons/github.svg" alt="" class="icon">
+                <img src="icons/github.svg" alt="" data-icon="github">
               </a>
             </div>
           </li>
