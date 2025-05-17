@@ -15,11 +15,11 @@
   }
 
   :root.light{
-    --bg: #fffbf7;
-    --banner-bg: #ffffff;
-    --fg: #1b1a1a;
+    --bg: #cbcbcb;
+    --banner-bg: #ededed;
+    --fg: #0a003c;
     --blue: #f20000;
-    --yellow: #82bd14;
+    --yellow: #170088;
     --white: #000000;
   }
 
