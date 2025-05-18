@@ -450,10 +450,8 @@
   .banner-subtitle { font-size: clamp(1rem, 6vw + 0.3rem, 1.5rem); }
 
   .main-container { padding-inline: 1rem; gap: 1.5rem; }
-  .left-section, .center-section, .right-section {
-    padding: 0.5rem;
-
-   }
+  .left-section, .center-section, .right-section { padding: 0.5rem; }
+  .contact-icon-container img  { width: 45px }
    p.experience-kind, p.education-list-degree {
     font-family: "Montserrat", sans-serif;
     font-size: 1.8rem;
@@ -462,16 +460,15 @@
     color: var(--blue);
     text-align: center;
 }
-
   .portrait-container { flex-direction: column; text-align: center; }
   .portrait-container img { width: 140px; height: 140px; }
 
   .projects-container { grid-template-columns: repeat(auto-fill, minmax(160px,1fr)); }
+  .project-box a { font-size: .9rem; }
 
   .block h3 { font-size: 1.25rem; }
   .repo-skills, .skills-list { font-size: 0.85rem; }
 }
-
 @media (max-width: 380px) {
   .banner-main-container {
     background: var(--banner-bg);
@@ -503,6 +500,9 @@
     --fg: #1b1a1a;
     --blue: #f20000;
     --yellow: #82bd14;
+  }
+  .contact-icon-container img {
+    width: 35px;
   }
 }
 
