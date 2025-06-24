@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mail: 'icons/email.svg',
       phone: 'icons/phone.svg',
       github: 'icons/github.svg',
-      skills: 'icons/skills.svg'
+      skills: 'icons/skills_.svg'
     },
     light: {
       'two-star': 'icons/two-star.png',
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mail: 'icons/mail_red.png',
       phone: 'icons/phone_red.png',
       github: 'icons/github_red.png',
-      skills: 'icons/skills_.png'
+      skills: 'icons/skills.png'
     }
   };
 
@@ -158,12 +158,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   applyTheme('dark');
-  btn.textContent = '🌙 Sombre';
+  btn.innerHTML = "<span class='material-icons-outlined'>dark_mode</span>";
 
   btn.addEventListener('click', () => {
     const lightMode = document.documentElement.classList.toggle('light');
     const theme = lightMode ? 'light' : 'dark';
-    btn.textContent = lightMode ? '☀️ Clair' : '🌙 Sombre';
+    btn.innerHTML = lightMode ? '<span class="material-icons-outlined">light_mode</span>' : '<span class="material-icons-outlined">dark_mode</span>';
     localStorage.setItem('theme', theme);
     applyTheme(theme);
   });
