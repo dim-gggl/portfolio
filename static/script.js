@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
   const personalProjects = [
     'kvir_up',
-    'Hash-iz'
+    'Hash-iz',
+    'catalogue'
   ];
   const projects = {
     "Book_Scraper": {
@@ -72,6 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
       intro: "Password Manager + Générateur de mots de passe",
       role: "Conception du projet et implémentation du cryptage avec ChatGPT",
       skills: ["Flask", "SQLAlchemy"]
+    },
+    'catalogue': {
+      intro: "App pour collectionneurs",
+      role: "Fullstack - Implémentation complète de l'appli",
+      skills: ["Django", "SQLite"]
     }
   }
 
@@ -79,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   experience.forEach(item => {
     const li = document.createElement('li');
     li.innerHTML = `
-        <p class="experience-year">${item.period}<p>
+        <p class="experience-year">${item.period}</p>
         <p class="experience-kind">${item.field}</p>
         <p class="experience-role">${item.role}</p>
         <ul>
