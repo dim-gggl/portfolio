@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'lit_review'
   ];
   const personalProjects = [
-    'kviR-Up',
+    'kvir_up',
     'Hash-iz'
   ];
   const projects = {
