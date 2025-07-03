@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Fullstack - Django + SQLite",
       skills: ["Django", "SQLite"]
     },
-    "kviR-Up": {
+    "kvir_up": {
       intro: "App dynamique générant des listes de films sur des thématiques LGBTQIA+",
       role: "Fullstack - Implémentation complète de l'appli",
       skills: ["Flask", "Jinja", "API ThemovieDB"]
