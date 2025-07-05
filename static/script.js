@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'Chess_Up',
     'AlgoInvest-Trade',
     'JustStreamIt',
-    'lit_review'
+    'lit_review',
+    'softdesk_support'
   ];
   const personalProjects = [
     'kvir_up',
@@ -63,6 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
       intro: "Réseau social pour critiques littéraires",
       role: "Fullstack - Django + SQLite",
       skills: ["Django", "SQLite"]
+    },
+    "softdesk_support": {
+      intro: "API RESTFul pour B2B",
+      role: "Back-End + C.L.I",
+      skills: ["Django", "Django Rest Framework", "SQLite"]
     },
     "kvir_up": {
       intro: "App dynamique générant des listes de films sur des thématiques LGBTQIA+",
