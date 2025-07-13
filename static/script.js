@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const academicProjects = [
-    'Book_Scraper',
-    'Chess_Up',
-    'AlgoInvest-Trade',
-    'JustStreamIt',
+    'softdesk_support',
     'lit_review',
-    'softdesk_support'
+    'JustStreamIt',
+    'AlgoInvest-Trade',
+    'Chess_Up',
+    'Book_Scraper'    
   ];
   const personalProjects = [
     'kvir_up',
