@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
     'Book_Scraper'    
   ];
   const personalProjects = [
+    'aura-app',
     'kvir_up',
     'Hash-iz',
-    'catalogue'
   ];
   const projects = {
     "Book_Scraper": {
@@ -70,6 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Back-End + C.L.I",
       skills: ["Django", "Django Rest Framework", "SQLite"]
     },
+    'aura-app': {
+      intro: "App pour collectionneurs",
+      role: "Fullstack - Implémentation complète de l'appli",
+      skills: ["Django", "SQLite"]
+    },
     "kvir_up": {
       intro: "App dynamique générant des listes de films sur des thématiques LGBTQIA+",
       role: "Fullstack - Implémentation complète de l'appli",
@@ -80,11 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Conception du projet et implémentation du cryptage avec ChatGPT",
       skills: ["Flask", "SQLAlchemy"]
     },
-    'catalogue': {
-      intro: "App pour collectionneurs",
-      role: "Fullstack - Implémentation complète de l'appli",
-      skills: ["Django", "SQLite"]
-    }
   }
 
   const expList = document.getElementById('experience-list');
