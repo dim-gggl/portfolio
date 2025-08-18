@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
       details: [
         "Gestion du stress & priorisation en service full rush",
         "Écoute active et résolution de litiges en temps réel",
-        "Contrôle qualité & standards HACCP",
-        "Participation à l'analyse des tickets de caisse (premiers pas data-driven)"
+        "Analyse des tickets de caisse (premiers pas data-driven)"
       ]
     }
   ];
@@ -27,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const academicProjects = [
+    'GUDLFT',
     'softdesk_support',
     'lit_review',
     'JustStreamIt',
@@ -37,9 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const personalProjects = [
     'aura-app',
     'kvir_up',
-    'Hash-iz',
+    'ClinKey',
   ];
   const projects = {
+    "GUDLFT": {
+      intro: "Refactorisation, tests et stabilisation d'une application Flask",
+      role: "Back-End",
+      skills: ["Flask", "Pytest", "Git", "CI/CD"]
+    },
     "Book_Scraper": {
       intro: "Pipeline ETL",
       role: "Back-End + C.L.I",
@@ -71,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       skills: ["Django", "Django Rest Framework", "SQLite"]
     },
     'aura-app': {
-      intro: "App pour collectionneurs",
+      intro: "Gestion de collection d'art",
       role: "Fullstack - Implémentation complète de l'appli",
       skills: ["Django", "SQLite"]
     },
@@ -80,10 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
       role: "Fullstack - Implémentation complète de l'appli",
       skills: ["Flask", "Jinja", "API ThemovieDB"]
     },
-    "Hash-iz": {
-      intro: "Password Manager + Générateur de mots de passe",
-      role: "Conception du projet et implémentation du cryptage avec ChatGPT",
-      skills: ["Flask", "SQLAlchemy"]
+    "ClinKey": {
+      intro: "Générateur de mots de passe",
+      role: "Conception et implémentation",
+      skills: ["Front-End", "HTML", "CSS", "Javascript"]
     },
   }
 
