@@ -281,13 +281,46 @@ body {
 
 /* Inline | file:///Users/dim-gggl/~/Dev%20Tools/portfolio/index.html */
 
-h3 {
-}
-
 #projects-container, ::before, ::after {
   padding-top: 0rem;
 }
 
 #projects-container h3 {
   margin: 2rem auto 0.6rem auto;
+}
+
+/* --- Responsive (Téléphone) --- */
+@media (max-width: 600px) {
+    html, body { overflow-x: hidden; }
+    body { padding: 1rem; }
+    .content-wrapper { padding: 1rem; }
+    .data-section { padding: 1.5rem 0; }
+
+    .header-content { flex-wrap: wrap; gap: 0.5rem; }
+    .header-content > h1 { font-size: clamp(1.05rem, 5vw, 1.25rem); line-height: 1.2; margin: 0; }
+    #theme-toggle { padding: 0.25rem 0.5rem; }
+
+    .intro-section { gap: 1rem; }
+    .hero-portrait { width: 128px; height: auto; border-radius: 20%; }
+
+    .section-title { font-size: 1.1rem; }
+    #projects-container h3 { margin: 1.25rem 0 0.5rem 0; }
+    #projects-container .project-item { padding: 0.85rem; }
+    .project-title { font-size: 1rem; }
+    .project-intro { font-size: 0.95rem; }
+    .project-skills { font-size: 0.85rem; }
+
+    .parcours-grid, .competences-grid { grid-template-columns: 1fr; }
+    #skills-container ul { gap: 0.5rem; }
+    #skills-container ul li { font-size: 0.85rem; padding: 0.25rem 0.6rem; }
+
+    #contact-list { gap: 1rem; }
+}
+
+@media (max-width: 380px) {
+    body { padding: 0.75rem; }
+    .content-wrapper { padding: 0.75rem; }
+    .data-section { padding: 1.25rem 0; }
+    .hero-portrait { width: 104px; }
+    .section-title { font-size: 1rem; }
 }
