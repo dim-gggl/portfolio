@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { period: '2012', degree: 'Master 1 Cinéma', institution: 'Université Paris X Nanterre' }
     ];
     const academicProjects = ['GUDLFT', 'softdesk_support', 'lit_review', 'JustStreamIt', 'AlgoInvest-Trade', 'Chess_Up', 'Book_Scraper'];
-    const personalProjects = ['aura-app', 'kvir_up', 'Clinkey'];
+    const personalProjects = ['aura-app', 'kvir_up', 'ClinKey'];
     const projects = {
       "GUDLFT": { intro: "Refactorisation, débogage, tests et stabilisation d'une application Flask existante", role: "Back-End", skills: ["Flask", "Pytest", "Git","locust", "CI/CD"] },
       "Book_Scraper": { intro: "Web scraping, HTML Parsing via un Pipeline ETL", role: "Back-End + C.L.I", skills: ["Requests", "BeautifulSoup", "CLI"] },
@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
       "softdesk_support": { intro: "Développement d'une API RESTFul pour traiter des tickets inter-entreprises", role: "Back-End + C.L.I", skills: ["Django", "Django Rest Framework", "SQLite", "JSON Web Token", "PostMan", "OWASP"] },
       'aura-app': { intro: "Application de gestion de collection d'art + API", role: "Fullstack - Implémentation complète de l'appli", skills: ["Django + extensions", "SQLite", "MySQL", "Django rest-Framework", "JWT"] },
       "kvir_up": { intro: "App dynamique générant des listes de films sur des thématiques LGBTQIA+", role: "Fullstack - Implémentation complète de l'appli", skills: ["Django + extensions", "Jinja", "API ThemovieDB", "OpenAI"] },
-      "Clinkey": { intro: "Générateur de mots de passe", role: "Conception et implémentation", skills: ["Front-End", "HTML", "CSS", "Javascript"] },
+      "ClinKey": { intro: "Générateur de mots de passe", role: "Conception et implémentation", skills: ["Front-End", "HTML", "CSS", "Javascript"] },
     };
-    const skills = ['Python', 'uv', 'poetry', 'Flask', 'Django', 'Django Rest Framework', 'Jinja', 'MySQL', 'SQLite', 'HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'];
+    const stackList = ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub', 'Google Fonts', 'Bootstrap'];
   
     // --- LOGIQUE D'AFFICHAGE (ADAPTÉE AU NOUVEAU DESIGN) ---
   
@@ -56,12 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!projectData) return;
         const card = document.createElement('div');
         const link = document.createElement('a');
-        link.href = `./${name}.html`;
+        link.href = `https://github.com/dim-gggl/${name}`;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
         card.className = 'project-item';
         link.innerHTML = `
-          <h4 class="project-item-title">${name}</h4>
+          <h4 class="project-title">${name}</h4>
           <p class="project-intro">${projectData.intro || ''}</p>
           <p class="project-skills">${projectData.skills.join(' • ')}</p>
         `;
@@ -69,9 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
         container.appendChild(card);
       });
     };
-    
-    loadProjects(personalProjects, 'projects-container', 'Projets Perso');
     loadProjects(academicProjects, 'projects-container', "Projets d'études");
+    loadProjects(personalProjects, 'projects-container', 'Projets Perso');
   
     // Expérience
     const expList = document.getElementById('experience-list');
@@ -103,15 +102,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
     // Compétences
-    const skillsList = document.createElement('ul');
-    const skillsContainer = document.getElementById('skills-container');
-    if (skillsContainer) {
-      skills.forEach(skill => {
+    const skillsList = document.querySelector('.stack-list');
+    if (skillsList) {
+      stackList.forEach(skill => {
         const li = document.createElement('li');
         li.textContent = skill;
         skillsList.appendChild(li);
       });
-      skillsContainer.appendChild(skillsList);
     }
     
     // Contact
