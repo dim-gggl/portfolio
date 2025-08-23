@@ -138,6 +138,15 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       skillsContainer.appendChild(skillsList);
     }
+
+    const deficit = (6 - (skillsList.children.length % 6)) % 6;
+    for (let i = 0; i < deficit; i++) {
+      const filler = document.createElement('li');
+      filler.className = 'skill-link-container';
+      filler.style.visibility = 'hidden'; // occupe l'espace mais invisible
+      filler.textContent = '.'; // contenu fictif
+      skillsList.appendChild(filler);
+    }
     
     // Contact
     const contactList = document.getElementById('contact-list');

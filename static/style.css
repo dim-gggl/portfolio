@@ -241,7 +241,40 @@
         flex-grow: 1;
         text-align: center;
     }
+
+    #stack-container {
+      max-width: 33vw;
+      /* margin-inline: auto; */
+    }
     
+    .table-scroll {
+      width: 100%; /* fixe  ou responsif ; adapte la borne haute */
+      overflow-x: auto;
+      overflow-y: hidden;
+      border: 1px solid var(--accent-color);
+      border-radius: 8px;
+      -webkit-overflow-scrolling: touch; /* inertie iOS */
+      padding: 1rem;
+    }
+
+    .table-scroll > table {
+      border-collapse: collapse;
+      width: max-content;        /* s’adapte au contenu */
+      min-width: 100%;           /* ne rétrécit pas sous la largeur du conteneur */
+    }
+
+    .table-scroll th,
+    .table-scroll td {
+      white-space: nowrap;
+      padding: 8px 12px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .table-scroll td.desc {
+      white-space: normal;       /* réactive les retours à la ligne pour CETTE colonne */
+      max-width: 60ch;           /* borne la largeur visuelle si tu le souhaites */
+    }
+
     /* --- FOOTER --- */
     .site-footer {
     margin-top: 1rem;
@@ -249,8 +282,8 @@
     #contact-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
     margin-top: 1rem;
+    justify-content: space-evenly;
     }
     .copyright {
     margin-top: 2rem;
@@ -325,8 +358,8 @@ body {
   padding-top: 0rem;
 }
 
-#projects-container h3 {
-  margin: 2rem auto 0.6rem auto;
+.preview-title {
+  margin: 2rem 0 0.6rem 0;
 }
 
 .skill-link-container {
@@ -372,6 +405,7 @@ body {
     #skills-container ul li { font-size: 0.85rem; padding: 0.25rem 0.6rem; }
 
     #contact-list { gap: 1rem; }
+    #stack-container { max-width: 100%; }
 }
 
 @media (max-width: 380px) {
