@@ -22,7 +22,22 @@ document.addEventListener('DOMContentLoaded', () => {
       "kvir_up": { intro: "App dynamique générant des listes de films sur des thématiques LGBTQIA+", role: "Fullstack - Implémentation complète de l'appli", skills: ["Django + extensions", "Jinja", "API ThemovieDB", "OpenAI"] },
       "Clinkey": { intro: "Générateur de mots de passe", role: "Conception et implémentation", skills: ["Front-End", "HTML", "CSS", "Javascript"] },
     };
-    const skills = [('Python', 'https://www.python.org'), ('uv', 'https://docs.astral.sh/uv/'), ('poetry', 'https://python-poetry.org/'), ('Flask', 'https://flask.palletsprojects.com/en/stable/'), ('Django', 'https://www.djangoproject.com/'), ('Django Rest Framework', 'https://www.django-rest-framework.org/'), ('Jinja', 'https://jinja.palletsprojects.com/en/3.1.x/'), ('MySQL', 'https://www.mysql.com/'), ('SQLite', 'https://www.sqlite.org/index.html'), ('HTML', 'https://developer.mozilla.org/fr/docs/Web/HTML'), ('CSS', 'https://developer.mozilla.org/fr/docs/Web/CSS'), ('JavaScript', 'https://developer.mozilla.org/fr/docs/Web/JavaScript'), ('Git', 'https://git-scm.com/'), ('GitHub', 'https://github.com/')];
+    const skills = [
+      ['Python', 'https://www.python.org'],
+      ['uv', 'https://docs.astral.sh/uv/'],
+      ['poetry', 'https://python-poetry.org/'],
+      ['Flask', 'https://flask.palletsprojects.com/en/stable/'],
+      ['Django', 'https://www.djangoproject.com/'],
+      ['Django Rest Framework', 'https://www.django-rest-framework.org/'],
+      ['Jinja', 'https://jinja.palletsprojects.com/en/3.1.x/'],
+      ['MySQL', 'https://www.mysql.com/'],
+      ['SQLite', 'https://www.sqlite.org/index.html'],
+      ['HTML', 'https://developer.mozilla.org/fr/docs/Web/HTML'],
+      ['CSS', 'https://developer.mozilla.org/fr/docs/Web/CSS'],
+      ['JavaScript', 'https://developer.mozilla.org/fr/docs/Web/JavaScript'],
+      ['Git', 'https://git-scm.com/'],
+      ['GitHub', 'https://github.com/']
+    ];
   
     // --- LOGIQUE D'AFFICHAGE (ADAPTÉE AU NOUVEAU DESIGN) ---
   
@@ -108,13 +123,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const skillsContainer = document.getElementById('skills-container');
     if (skillsContainer) {
       skills.forEach(skill => {
-        const a = document.createElement('a');
-        a.href = skill[1];
-        a.target = '_blank';
-        a.rel = 'noopener noreferrer';
-        a.textContent = skill[0];
+        const skillLink = document.createElement('a');
+        skillLink.href = skill[1];
+        console.log(skill[1]);
+        skillLink.target = '_blank';
+        skillLink.rel = 'noopener noreferrer';
+        skillLink.text = skill[0];
+        skillLink.className = 'skill-link';
+        console.log(skill[0]);
         const li = document.createElement('li');
-        li.appendChild(a);
+        li.appendChild(skillLink);
+        li.className = 'skill-link-container'
         skillsList.appendChild(li);
       });
       skillsContainer.appendChild(skillsList);
