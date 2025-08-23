@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JustStreamIt // Dimitri Gaggioli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body class="dark-theme">
+  <header class="site-header">
+    <div class="header-content">
+      <h1><span>Dimitri Gaggioli</span> / Développeur Python</h1>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
+        <span class="material-symbols-outlined icon-dark">dark_mode</span>
+        <span class="material-symbols-outlined icon-light">light_mode</span>
+      </button>
+      <a href="./index.html" class="home-link">Retour à l'accueil</a>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+    <section class="intro-section">
+      <div class="intro-text">
+        <h2 class="project-title">JustStreamIt,<br><em class="project-subtitle">découvrir les films les mieux notés.</em></h2>
+        <p>
+          Front-end JavaScript consommant l’API OCMovies (OpenClassrooms) pour afficher le meilleur film,
+          des tops par catégories, et des fiches détaillées en modal (affiche, résumé, casting).
+        </p>
+        <div class="links-container">
+          <a href="https://github.com/dim-gggl/JustStreamIt" target="_blank">Voir le projet sur GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="functionnalities" class="data-section">
+      <h2 class="section-title" data-title="// Fonctionnalités"></h2>
+      <div id="functionnalities-container">
+        <ul>
+          <li>> Film le mieux noté en hero (affiche + résumé court)</li>
+          <li>> Carrousels &#171; Meilleurs films &#187; et par genre</li>
+          <li>> Fiche détaillée en modal sur clic affiche</li>
+          <li>> Pagination côté API OCMovies</li>
+          <li>> UI responsive (HTML/CSS/JS vanilla)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="preview-section" class="preview-section">
+      <h2 class="preview-title" data-title="Aperçu"></h2>
+      <div class="preview-grid">
+        <div id="preview-container">
+          <h3 class="preview-title">// Page d'accueil</h3>
+          <img src="static/img/JustStreamIt_home.png" class="preview-image" alt="Aperçu de JustStreamIt (home)">
+        </div>
+        <div id="preview-container">
+          <h3 class="preview-title">// Détail (modal)</h3>
+          <img src="static/img/JustStreamIt_modal.png" class="preview-image" alt="Aperçu de JustStreamIt (modal)">
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" class="data-section">
+      <h2 class="section-title" data-title="Stack du projet"></h2>
+      <div class="competences-grid">
+        <div id="stack-container">
+          <h3>// Stack et dépendances</h3>
+          <ul class="stack-list">
+            <li>JavaScript (ES6)</li>
+            <li>HTML5 / CSS3</li>
+            <li>API REST OCMovies</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <a href="./index.html" class="home-link">Retour à l'accueil</a>
+  </main>
+
+  <footer class="site-footer">
+    <h2 class="section-title" data-title="Contact"></h2>
+    <ul id="contact-list"></ul>
+    <p class="copyright">MIT License (c) 2025 Dimitri Gaggioli</p>
+  </footer>
+
+  <script src="static/juststreamit.js"></script>
+</body>
+</html>
