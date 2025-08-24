@@ -293,7 +293,7 @@
     .preview-title {
       color: var(--accent-color) !important;
     }
-    .preview-image {
+    .preview-image, .preview-image-link {
         max-width: 100%;
         margin: 0 auto;
         border: 1px solid var(--accent-color);

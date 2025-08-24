@@ -55,12 +55,58 @@
       <h2 class="preview-title" data-title="Aperçu"></h2>
       <div class="preview-grid">
         <div id="preview-container">
-          <h3 class="preview-title">// Endpoints (Swagger)</h3>
-          <img src="static/img/SoftDesk_swagger.png" class="preview-image" alt="Swagger SoftDesk Support">
-        </div>
-        <div id="preview-container">
-          <h3 class="preview-title">// Exemple de payload</h3>
-          <img src="static/img/SoftDesk_payload.png" class="preview-image" alt="Payload JSON SoftDesk">
+          <h3 class="preview-title">// Exemples de payload</h3>
+          <p>
+            <strong>GET /api/v1/users/&lt;int:user_id&gt;</strong>
+            <br>Le détail d'un utilisateur (accessible uniquement à l'utilisateur concerné)
+          </p>
+          <pre><code>
+            {
+              "id": 20,
+              "username": "user",
+              "password": "pbkdf2_sha256$1000000$t0LJR5y0TbmevYwJ6SACI5$Qpc7OpxECuLagHaBo88NlpXzB5APJ9hm/O4QFCQ0OyA=",
+              "email": null,
+              "first_name": "",
+              "last_name": "",
+              "age": 15,
+              "can_be_contacted": true,
+              "can_data_be_shared": true,
+              "date_joined": "2025-08-23T23:04:23.666465Z"
+            }
+          </code></pre>
+          <p>
+            <strong>GET /api/v1/users/</strong>
+            <br>La liste de tous les utilisateurs (accessible à tous, à condition d'être authentifié)
+          </p>
+          <pre><code>
+            {
+              "count": 16,
+              "next": "http://127.0.0.1:8000/api/users/?limit=5&amp;offset=5",
+              "previous": null,
+              "results": [
+                  {
+                      "id": 20, 
+                      "username": "john.doe_00"
+                  }, 
+                  {
+                      "id": 19, 
+                      "username": "jane.d0e"
+                  }, 
+                  {
+                      "id": 18, 
+                      "username": "dup0nt.jean"
+                  }, 
+                  {
+                      "id": 17, 
+                      "username": "john.Dpont7"
+                  }, 
+                  {
+                      "id": 16, 
+                      "username": "d.jeanne_1"
+                  }
+              ]
+          }
+          </code></pre>
         </div>
       </div>
     </section>
