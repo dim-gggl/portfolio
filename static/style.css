@@ -10,6 +10,7 @@
     --accent-color: #00F5A0; /* Un vert menthe vif */
     --border-color: #444444;
     --portrait-border: 1px solid #ebebeb;
+
     }
     
     body.light-theme {
@@ -303,7 +304,16 @@
         margin: 0 auto;
         border: 1px solid var(--accent-color);
         border-radius: 10px;
-    }   
+    }
+
+    .epic-events-image {
+      background-color: transparent;
+    }
+
+    body.light-theme .epic-events-image {
+      background-color: #1a1a1a;
+    }
+
     div#preview-container {
       display: flex;
       flex-direction: column;

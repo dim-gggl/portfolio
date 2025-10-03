@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>epic events // Dimitri Gaggioli</title>
+  <!-- Google Fonts (IBM Plex Mono & Material Symbols) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+  <link rel="icon" type="image/png" href="flavicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="flavicon/favicon.svg" />
+  <link rel="shortcut icon" href="flavicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="flavicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="dim-gggl" />
+  <link rel="manifest" href="flavicon/site.webmanifest" />
+   <!-- CSS principal -->
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body class="dark-theme">
+  <header class="site-header">
+    <div class="header-content">
+      <h1><span>Dimitri Gaggioli</span> / Développeur Python</h1>
+      <div class="header-links">
+        <a href="index.html" aria-label="Retour à l'accueil">Accueil</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
+          <span class="material-symbols-outlined icon-dark">dark_mode</span>
+          <span class="material-symbols-outlined icon-light">light_mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+    <!-- Section de présentation -->
+    <section class="intro-section">
+      <div class="intro-text">
+        <h2 class="project-title">epic events</h2>
+        <h3 class="subtitle">CRM en CLI pour une agence d'événementiel</h3>
+        <p>Gérez vos événements, clients, contrats, ainsi que vos profils collaborateurs, avec une Interface en Ligne de Commande ergonomique et intuitive.</p>
+      </div>
+    </section>
+
+    <!-- Section Fonctionnalités -->
+    <section class="data-section">
+      <h2 class="section-title" data-title="Fonctionnalités"></h2>
+      <ul>
+        <li><strong>Flux CLI complet</strong> – Interface terminal intuitive et stylisée avec Rich pour créer, modifier, des événements, gérer sa clientèle et ses coollaborateurs.</li>
+        <li><strong>Connexion et données sécurisées</strong> – Système de persmissions et de validation des données permettant de garantir leur intégrité et d'en favoriser la sécurité.</li>
+        <li><strong>Base de données PostgreSQL</strong> – Sauvegarde automatique de toutes les données en base de données. Schéma dédié, robuste et scalable..</li>
+        <li><strong>Authentification via JWT</strong> – Système de connexion et de persmissions basé sur JWT pour garantir la sécurité des données utilisateurs.</li>
+        <li><strong>Journalisation des actions</strong> – Journalisation des erreurs et actions effectuée via Sentry.</li>
+      </ul>
+    </section>
+
+    <!-- Section Aperçu (structure du projet) -->
+    <section class="data-section">
+      <h2 class="section-title" data-title="Aperçu"></h2>
+      <div class="preview-container">
+        <h3 class="preview-title">// Le panneau d'aide</h3>
+        <div class="preview-content">
+            <img src="static/img/epic_events_help.svg" class="preview-image epic-events-image" alt="Aperçu du panneau d'aide de epic events">
+        </div>
+      </div>
+      <div class="preview-container">
+        <h3 class="preview-title">// Les détails d'un client</h3>
+        <div class="preview-content">
+            <img src="static/img/epic_events_details.svg" class="preview-image epic-events-image" alt="Aperçu des détails d'un client de epic events">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Stack du projet -->
+    <section id="competences" class="data-section">
+        <h2 class="section-title" data-title="Compétences"></h2>
+        <div class="competences-grid">
+            <div id="skills-container">
+                <h3>// Stack du projet</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lien vers le dépôt GitHub -->
+    <section class="data-section">
+      <p>📌 <a href="https://github.com/dim-gggl/epic_events" target="_blank" rel="noopener noreferrer">Voir le dépôt GitHub du projet</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <h2 class="section-title" data-title="Contact"></h2>
+    <ul id="contact-list"><!-- Contact injecté par script.js --></ul>
+    <p class="copyright">© dim-gggl 2025</p>
+  </footer>
+
+  <script type="module" src="static/epic_events.js"></script>
+</body>
+</html>
